@@ -125,4 +125,23 @@ body {
   .footer {
     width: 80%;
   }
+  .header {
+    background: yellow;
+    position: relative;
+  }
+  .logo {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .member {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .member a {
+    display: block;
+    padding: 1rem 0.5rem;
+    margin-left: 0.5rem;
+  }
 }
