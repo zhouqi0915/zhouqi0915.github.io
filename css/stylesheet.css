@@ -38,7 +38,6 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 .header,
@@ -107,10 +106,11 @@ body {
   .menubar-container {
     background: red;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1rem;
+    right: 1rem;
     width: 40px;
     height: 40px;
+    overflow: hidden;
   }
   .btn-menubar {
     position: absolute;
@@ -128,9 +128,10 @@ body {
     display: block;
     width: 40px;
     height: 10px;
-    background: blue;
+    background: #fff;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.2s;
   }
   .menubar-top {
     position: absolute;
@@ -148,6 +149,19 @@ body {
     bottom: 0;
     right: 0;
   }
+  .menubar-act .menubar-top {
+    transform: rotate(45deg);
+    top: 50%;
+    margin-top: -5px;
+  }
+  .menubar-act .menubar-middle {
+    transform: translatex(-100%) translatey(-5px);
+  }
+  .menubar-act .menubar-bottom {
+    transform: rotate(-45deg);
+    top: 50%;
+    margin-top: -5px;
+  }
   .main-menu {
     transform: translateX(-100%);
     background: rgba(0, 0, 0, 0.85);
@@ -159,6 +173,10 @@ body {
     height: 100vh;
     padding: 2rem;
     box-sizing: border-box;
+    transition: all 0.2s;
+  }
+  .menu-act {
+    transform: translatex(0);
   }
   .sub-menu {
     list-style: circle;
